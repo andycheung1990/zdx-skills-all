@@ -1,0 +1,32 @@
+{
+  "name": "openclaw-docker-setup",
+  "version": "1.0.0",
+  "description": "OpenClaw Docker 部署与腾讯云模型配置 Skill",
+  "author": "OpenClaw Community",
+  "license": "MIT",
+  "minOpenclawVersion": "2026.3.13",
+  "commands": {
+    "setup-docker": {
+      "description": "部署 OpenClaw 到 Docker",
+      "script": "scripts/setup-docker.sh"
+    },
+    "setup-tencent-cloud": {
+      "description": "配置腾讯云模型",
+      "script": "scripts/setup-tencent-cloud.sh"
+    },
+    "configure-auth": {
+      "description": "配置认证和配对",
+      "script": "scripts/configure-auth.sh"
+    },
+    "troubleshoot": {
+      "description": "问题排查",
+      "script": "scripts/troubleshoot.sh"
+    }
+  },
+  "config": {
+    "template": "config/openclaw.json.template"
+  },
+  "docs": {
+    "guide": "docs/setup-guide.md"
+  }
+}

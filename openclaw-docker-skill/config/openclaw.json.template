@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.13",
+    "lastTouchedAt": ""
+  },
+  "gateway": {
+    "bind": "lan",
+    "auth": {
+      "mode": "token",
+      "token": "YOUR_TOKEN_HERE"
+    },
+    "controlUi": {
+      "allowedOrigins": [
+        "http://localhost:18789",
+        "http://127.0.0.1:18789"
+      ]
+    }
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "tencent-coding-plan": {
+        "baseUrl": "https://api.lkeap.cloud.tencent.com/coding/v3",
+        "apiKey": "YOUR_TENCENT_API_KEY",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "tc-code-latest",
+            "name": "Auto",
+            "reasoning": false,
+            "input": ["text"],
+            "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 },
+            "contextWindow": 196608,
+            "maxTokens": 32768
+          },
+          {
+            "id": "hunyuan-2.0-instruct",
+            "name": "Tencent HY 2.0 Instruct",
+            "reasoning": false,
+            "input": ["text"],
+            "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 },
+            "contextWindow": 128000,
+            "maxTokens": 16000
+          },
+          {
+            "id": "hunyuan-2.0-thinking",
+            "name": "Tencent HY 2.0 Think",
+            "reasoning": false,
+            "input": ["text"],
+            "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 },
+            "contextWindow": 128000,
+            "maxTokens": 32000
+          },
+          {
+            "id": "hunyuan-t1",
+            "name": "Hunyuan-T1",
+            "reasoning": false,
+            "input": ["text"],
+            "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 },
+            "contextWindow": 64000,
+            "maxTokens": 32000
+          },
+          {
+            "id": "hunyuan-turbos",
+            "name": "hunyuan-turbos",
+            "reasoning": false,
+            "input": ["text"],
+            "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 },
+            "contextWindow": 32000,
+            "maxTokens": 16000
+          },
+          {
+            "id": "minimax-m2.5",
+            "name": "MiniMax-M2.5",
+            "reasoning": false,
+            "input": ["text"],
+            "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 },
+            "contextWindow": 196608,
+            "maxTokens": 32768
+          },
+          {
+            "id": "kimi-k2.5",
+            "name": "Kimi-K2.5",
+            "reasoning": false,
+            "input": ["text"],
+            "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 },
+            "contextWindow": 262144,
+            "maxTokens": 32768
+          },
+          {
+            "id": "glm-5",
+            "name": "GLM-5",
+            "reasoning": false,
+            "input": ["text"],
+            "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 },
+            "contextWindow": 202752,
+            "maxTokens": 16384
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "compaction": {
+        "mode": "safeguard"
+      }
+    }
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  }
+}
